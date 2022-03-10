@@ -1,0 +1,6 @@
+aiogram
+environs
+sqlalchemy
+psycopg2
+pandas
+xlrd
