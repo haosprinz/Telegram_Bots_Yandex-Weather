@@ -51,6 +51,7 @@ async def on_shutdown_webhook(dispatcher):
 
     logging.warning('Bye!')
 
+
 if __name__ == '__main__':
     if cfg.WEBHOOK_HOST == "":
         executor.start_polling(dp, on_startup=on_startup)
