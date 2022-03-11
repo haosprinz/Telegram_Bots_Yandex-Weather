@@ -23,6 +23,11 @@ DB_PASSWORD = env.str("DATABASE_PASSWORD")
 DB_USER = env.str("DATABASE_USER")
 DB_ENGINE = env.str("DATABASE_ENGINE")
 
+# Yandex Api
+YANDEX_URL = env.str("YANDEX_URL")
+YANDEX_KEY = env.str("YANDEX_KEY")
+YANDEX_VALUE = env.str("YANDEX_VALUE")
+
 ENGINE = create_engine('{0}://{1}:{2}@{3}/{4}'.format(DB_ENGINE, DB_USER,
                                                       DB_PASSWORD, DB_HOST, DB_NAME))
 
