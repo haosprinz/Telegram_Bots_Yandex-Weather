@@ -1,8 +1,6 @@
 import logging
 
-
-def locality(name):
-    dictionary = {
+dictionary = {
         "Челябинск": [55.159897, 61.402554],
         "Металлургический район": [55.2422888, 61.3769466],
         "Советский район": [55.11834, 61.3833043],
@@ -19,6 +17,9 @@ def locality(name):
         "Чебаркуль": [54.97981391504042, 60.36705260725639],
         "Копейск": [55.11734848799998, 61.61176079838372]
                   }
+
+
+def locality(name):
     try:
         return dictionary[name]
     except Exception as exc:
