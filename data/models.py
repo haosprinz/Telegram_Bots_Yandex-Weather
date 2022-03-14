@@ -6,9 +6,10 @@ Base = declarative_base()
 
 
 # Таблицы для телеграм-бота
-class Users(Base):
-    __tablename__ = 'Users'
+class Dialogs(Base):
+    __tablename__ = 'Dialogs'
     id = Column("Id", BigInteger, primary_key=True)
     user_id = Column("UserId", BigInteger)
+    user_name = Column("UserName", Text)
     user_text = Column("UserText", Text)
     date = Column("Date", DateTime, default=datetime.now())
