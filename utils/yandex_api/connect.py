@@ -16,7 +16,7 @@ def connect(text):
 
     # Check the response
     if res:
-        result = responce(res)
+        result = responce(res, text)
     else:
         # Print the error message for the invalid response
         result = 'Яндекс.Погода не отвечает напишите позднее'
