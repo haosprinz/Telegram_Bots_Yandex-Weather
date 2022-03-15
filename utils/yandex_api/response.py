@@ -13,6 +13,8 @@
 #               true — гроза.
 #               false — нет грозы.
 
+from handlers.declension import declension
+
 # Код расшифровки погодного описания
 condition = {
     'clear': 'ясно',
@@ -79,8 +81,8 @@ cloudness = {
 
 def responce(res, city):
     json_response = res.json()
-    result = f"По данным сервиса Яндекс.Погода:\n"\
-             f"Сейчас погода в {city} {json_response.get('fact').get('temp')}°C\n" \
+    result = f"По данным сервиса Яндекс.Погода:\n" \
+             f"Сейчас погода в {declension(city)} {json_response.get('fact').get('temp')}°C\n" \
              f"Ощущается как {json_response.get('fact').get('feels_like')}°C\n" \
              f"Атмосферное давление: {json_response.get('fact').get('pressure_mm')} мм рт. ст.\n" \
              f"{cloudness[json_response.get('fact').get('cloudness')]}, " \

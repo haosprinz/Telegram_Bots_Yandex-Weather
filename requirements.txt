@@ -1,7 +1,8 @@
-aiogram
-environs
-sqlalchemy
+aiogram~=2.19
+environs~=9.5.0
+sqlalchemy~=1.4.32
 psycopg2
 pandas
 xlrd
-requests
+requests~=2.27.1
+pymorphy2~=0.9.1
